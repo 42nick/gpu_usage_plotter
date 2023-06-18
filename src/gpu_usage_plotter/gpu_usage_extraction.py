@@ -8,6 +8,8 @@ import pandas as pd
 
 
 class GPUData(TypedDict):
+    """Container for GPU data."""
+
     name: str
     load: float
     memoryUtil: float
@@ -22,5 +24,4 @@ def get_gpu_usage() -> pd.DataFrame:
         )
         data.append(gpu_data)
 
-    df = pd.DataFrame(data)
-    return df
+    return pd.DataFrame(data)

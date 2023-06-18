@@ -8,7 +8,7 @@ version = "0.0.1"
 readme = "README.md"
 requires-python = ">=3.7"
 license = { text = "MIT License" }
-dependencies = ["gputil", "pandas", "plotly"]
+dependencies = ["gputil", "pandas", "plotly", "dash"]
 [project.optional-dependencies]
 dev = ["gpu_usage_plotter[test]", "gpu_usage_plotter[docs]", "tox"]
 test = ["pytest", "pytest-cov", "coverage", "black", "isort", "pylint", "mypy"]
