@@ -1,7 +1,9 @@
 {
     /* --------------------------------- python --------------------------------- */
     "python.terminal.activateEnvironment": true,
+    "editor.formatOnSave": false,
     "[python]": {
+        "editor.formatOnSave": false,
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         },
@@ -10,5 +12,10 @@
     "python.analysis.autoImportCompletions": true,
     "python.analysis.autoImportUserSymbols": true,
     "python.formatting.provider": "black",
-    "liveServer.settings.AdvanceCustomBrowserCmdLine": "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe",
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
