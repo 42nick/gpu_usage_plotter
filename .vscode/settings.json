@@ -3,7 +3,7 @@
     "python.terminal.activateEnvironment": true,
     "editor.formatOnSave": false,
     "[python]": {
-        "editor.formatOnSave": false,
+        "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         },
