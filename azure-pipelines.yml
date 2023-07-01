@@ -16,6 +16,16 @@ steps:
     versionSpec: '3.9'
   displayName: 'Use Python 3.9'
 
+  - task: Docker@2
+    displayName: Login to ACR
+    inputs:
+      command: login
+      containerRegistry: myregister42
+  - script: |
+      docker_id=$(docker run -d -t myregister42.azurecr.io/py_io_utils:v1)
+      docker exec -t $docker_id /bin/bash -cx 'ls'
+      docker exec -t $docker_id /bin/bash -cx 'python -c "from io_utils.io_json import dump_json, read_json; read_json()"'
+
 - script: |
     python -m pip install --upgrade pip
     pip install -e .[dev]
