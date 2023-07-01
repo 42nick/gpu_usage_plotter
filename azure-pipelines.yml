@@ -20,7 +20,7 @@ steps:
   displayName: Login to ACR
   inputs:
     command: login
-    containerRegistry: 'e531bfc1-7798-41f2-82b9-d50c6109d2d3'
+    containerRegistry: 'myregister42'
 
 - script: |
     docker_id=$(docker run -d -t myregister42.azurecr.io/py_io_utils:v1)
