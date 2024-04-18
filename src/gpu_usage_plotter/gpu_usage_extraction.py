@@ -4,6 +4,7 @@ from datetime import datetime
 from typing import TypedDict
 
 import GPUtil
+import numpy as np
 import pandas as pd
 
 
@@ -22,6 +23,11 @@ def get_gpu_usage() -> pd.DataFrame:
         gpu_data = GPUData(
             name=gpu.name, load=gpu.load * 100, memoryUtil=gpu.memoryUtil * 100, timestamp=datetime.now()
         )
+
+        # check of load is nan and then replace it with 0
+        if np.isnan(gpu_data["load"]):
+            gpu_data["load"] = 0
+
         data.append(gpu_data)
 
     return pd.DataFrame(data)
