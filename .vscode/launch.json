@@ -24,7 +24,15 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": false
+        },
+        {
+            "name": "App",
+            "type": "python",
+            "request": "launch",
+            "program": "src/gpu_usage_plotter/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": false
         },
     ]
 }
