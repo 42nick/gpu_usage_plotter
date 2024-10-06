@@ -1,4 +1,5 @@
 """This module contains a small dash up that plots the GPU usage of the system and updates the plot automatically."""
+
 import dash
 import pandas as pd
 import plotly.express as px
@@ -48,8 +49,12 @@ def update_graph_live(_, gpu_usage_data):
     data_df = pd.DataFrame.from_dict(gpu_usage_data["df"])
     data_df = pd.concat([data_df, get_gpu_usage()], ignore_index=True)
 
+    # Assuming data_df is already defined
     fig = px.line(data_df, x="timestamp", y=["load"], color="name")
+    fig.update_layout(xaxis_title="Timestamp", yaxis_title="GPU-Util in %")
+
     fig2 = px.line(data_df, x="timestamp", y=["memoryUtil"], color="name")
+    fig2.update_layout(xaxis_title="Timestamp", yaxis_title="Memory Usage in %")
 
     gpu_usage_data["df"] = data_df.to_dict()
     return fig, fig2, gpu_usage_data
