@@ -1,6 +1,3 @@
-import os
-import threading
-import time
 
 import dash
 import pandas as pd

@@ -1,6 +1,5 @@
 import datetime
 
-import dash
 import plotly
 from dash import Dash, Input, Output, callback, dcc, html
 
