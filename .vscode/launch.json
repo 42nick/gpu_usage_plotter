@@ -32,7 +32,8 @@
             "request": "launch",
             "program": "src/gpu_usage_plotter/main.py",
             "console": "integratedTerminal",
-            "justMyCode": false
+            "justMyCode": false,
+            "args": ["--no-dash"]
         },
     ]
 }
