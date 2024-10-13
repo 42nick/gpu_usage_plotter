@@ -5,6 +5,9 @@
 Start the app by running: 
 ```bash     
 python src/gpu_usage_plotter/main.py
+
+# or without the dash app
+python src/gpu_usage_plotter/main.py --no-dash
 ```
 
 
