@@ -29,7 +29,7 @@ app.layout = html.Div(
 )
 
 
-# Multiple components can update everytime interval gets fired.
+# Multiple components can update every time interval gets fired.
 @app.callback(
     [
         Output("live-update-gpu-load", "figure"),
